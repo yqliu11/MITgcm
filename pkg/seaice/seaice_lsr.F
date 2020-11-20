@@ -517,10 +517,10 @@ C
        DO bi=myBxLo(myThid),myBxHi(myThid)
         DO J=jMin,jMax
          DO I=iMin,iMax
-          SideDragX(i,j,bi,bj) = SideDragX(i,j,bi,bj) 
-     &                          + DWATN(i,j,bi,bj) * COSWAT
-          SideDragY(i,j,bi,bj) = SideDragY(i,j,bi,bj) 
-     &                          + DWATN(i,j,bi,bj) * COSWAT
+c          SideDragX(i,j,bi,bj) = SideDragX(i,j,bi,bj) 
+c     &                          + DWATN(i,j,bi,bj) * COSWAT
+c          SideDragY(i,j,bi,bj) = SideDragY(i,j,bi,bj) 
+c     &                          + DWATN(i,j,bi,bj) * COSWAT
            BU(I,J,bi,bj) = BU(I,J,bi,bj) + seaiceMaskU(I,J,bi,bj)
      &                   * SideDragX(I,J,bi,bj) 
      &                   * areaW(I,J,bi,bj) 
